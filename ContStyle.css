@@ -1,0 +1,139 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+header, footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container, .values-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeIn 1s ease;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+.values-container {
+    margin-top: 20px;
+}
+input[type="number"], select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+button, a.button {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+button:hover, a.button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+h2, h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+.values-list {
+    text-align: left;
+    margin-top: 20px;
+}
+.values-list ul {
+    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+.values-list ul li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media (max-width: 600px) {
+    .container, .values-container {
+        width: 100%;
+    }
+    input[type="number"], select, button, a.button {
+        width: 100%;
+    }
+}
